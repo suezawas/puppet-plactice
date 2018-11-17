@@ -1,7 +1,7 @@
-package {'npt':
+package {'ntp':
   ensure => installed,
 }
-file {'/etc/ntp.cpnf':
+file {'/etc/ntp.conf':
   ensure => file,
   content => @("NTPCONF"/L)
   driftfile /var/lib/ntp/ntp.drift
